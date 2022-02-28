@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package trivial.ipc;
+
+service RPCService {
+  rpc UnaryCall (UnaryCallRequest) returns (UnaryCallReply) {}
+}
+
+message UnaryCallRequest {
+  fixed64 i = 1;
+}
+
+message UnaryCallReply {
+  fixed64 i = 1;
+}
+
